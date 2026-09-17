@@ -45,7 +45,7 @@
     "audit:release": "node scripts/audit.mjs --release"
   },
   "dependencies": {
-    "commander": "13.1.0",
+    "commander": "15.0.0",
     "openai": "7.9.0"
   },
   "devDependencies": {
