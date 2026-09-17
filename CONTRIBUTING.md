@@ -6,7 +6,7 @@ failure-mode test. For larger changes, discuss the behavior in an issue first.
 
 ## Development
 
-Use Node.js 22 or newer. Install dependencies without lifecycle scripts:
+Use Node.js 22.12.0 or newer. Install dependencies without lifecycle scripts:
 
 ```bash
 npm install --ignore-scripts

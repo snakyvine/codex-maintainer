@@ -55,7 +55,7 @@ inspect. A valid quotation still does not prove a bug; the maintainer decides.
 
 ## Quick Start
 
-Use Node.js **22 or newer** and npm. Clone the repository first:
+Use Node.js **22.12.0 or newer** and npm. Clone the repository first:
 
 ```bash
 git clone https://github.com/snakyvine/codex-maintainer.git
