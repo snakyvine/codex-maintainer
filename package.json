@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "commander": "13.1.0",
-    "openai": "7.9.0"
+    "openai": "7.15.0"
   },
   "devDependencies": {
     "@types/node": "24.0.4",
