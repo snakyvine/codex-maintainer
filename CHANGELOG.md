@@ -20,6 +20,7 @@ has been published; GitHub release tags are the release record.
 
 ### Changed
 
+- Upgrade the OpenAI SDK to 7.15.0, verified with the SDK transport contract.
 - Upgrade Commander to 15.0.0 and require Node.js 22.12.0 or newer; CI now
   exercises that minimum version as well as current Node 22 and 24.
 - Keep automatic TypeScript and Node type-definition updates within their current
