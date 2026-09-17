@@ -20,7 +20,7 @@ const pkg = JSON.parse(await readFile('package.json', 'utf8'));
 const tsconfig = JSON.parse(await readFile('tsconfig.json', 'utf8'));
 check(tsconfig.compilerOptions.strict === true, 'TypeScript strict mode must be enabled.');
 check(tsconfig.compilerOptions.noUncheckedIndexedAccess === true, 'Unchecked indexed access must be rejected.');
-check(pkg.type === 'module' && pkg.engines.node === '>=22', 'Runtime module/engine contract changed.');
+check(pkg.type === 'module' && pkg.engines.node === '>=22.12.0', 'Runtime module/engine contract changed.');
 check(pkg.license === 'MIT', 'Package license must match LICENSE.');
 for (const [name, version] of Object.entries({ ...pkg.dependencies, ...pkg.devDependencies })) check(/^\d+\.\d+\.\d+$/.test(version), `Dependency is not exact-pinned: ${name}`);
 for (const name of ['lint', 'typecheck', 'test', 'build', 'test:sdk', 'audit:repo', 'audit:release']) check(typeof pkg.scripts[name] === 'string', `Missing script: ${name}`);
