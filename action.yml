@@ -1,0 +1,71 @@
+name: Codex Maintainer
+description: Evidence-grounded issue triage and PR review. Read-only by default.
+branding:
+  icon: eye
+  color: blue
+inputs:
+  openai-api-key:
+    description: OpenAI API key from Actions secrets. Optional only for events that are skipped.
+    required: false
+  github-token:
+    description: Use the default GitHub Actions token; grant write permissions only when comment is enabled.
+    required: false
+    default: ${{ github.token }}
+  model:
+    description: Override the configured OpenAI Responses model. Default is gpt-5.3-codex.
+    required: false
+    default: ''
+  comment:
+    description: Explicitly create or update one recommendation comment; never approve, merge, close or modify files.
+    required: false
+    default: 'false'
+  allow-forks:
+    description: Opt into fork PR analysis where credentials are available. This does NOT bypass GitHub secret restrictions.
+    required: false
+    default: 'false'
+  allow-external-issues:
+    description: Allow issues from non-collaborators to incur OpenAI API usage. Review your budget before enabling.
+    required: false
+    default: 'false'
+outputs:
+  status:
+    description: completed or skipped; failures fail the step.
+    value: ${{ steps.maintain.outputs.status }}
+  report-path:
+    description: Absolute path to Markdown in runner temporary storage (not automatically uploaded).
+    value: ${{ steps.maintain.outputs.report-path }}
+  json-path:
+    description: Absolute path to the structured JSON report.
+    value: ${{ steps.maintain.outputs.json-path }}
+  comment-id:
+    description: Comment ID when comment was explicitly enabled.
+    value: ${{ steps.maintain.outputs.comment-id }}
+runs:
+  using: composite
+  steps:
+    - name: Set up the maintainer runtime
+      uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      with:
+        node-version: '24'
+        package-manager-cache: false
+    - name: Install only the Action's dependencies
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      run: |
+        if test -f package-lock.json; then
+          npm ci --omit=dev --ignore-scripts --no-audit --no-fund
+        else
+          npm install --omit=dev --ignore-scripts --no-audit --no-fund --package-lock=false
+        fi
+    - name: Analyze and report
+      id: maintain
+      shell: bash
+      env:
+        CM_ACTION_PATH: ${{ github.action_path }}
+        OPENAI_API_KEY: ${{ inputs.openai-api-key }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+        CM_ACTION_MODEL: ${{ inputs.model }}
+        CM_ACTION_COMMENT: ${{ inputs.comment }}
+        CM_ACTION_ALLOW_FORKS: ${{ inputs.allow-forks }}
+        CM_ACTION_ALLOW_EXTERNAL_ISSUES: ${{ inputs.allow-external-issues }}
+      run: node "$CM_ACTION_PATH/dist/action/index.js"

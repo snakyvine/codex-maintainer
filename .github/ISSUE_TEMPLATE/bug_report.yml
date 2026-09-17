@@ -1,0 +1,32 @@
+name: Bug report
+description: A reproducible defect in Codex Maintainer itself.
+body:
+  - type: markdown
+    attributes:
+      value: Do not include API keys, private source, or unredacted reports. Use SECURITY.md for vulnerabilities.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Include Node.js version and operating system.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Commands and synthetic input sufficient to reproduce the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized error output
+      description: Remove credentials, account identifiers and private code.
+      render: text

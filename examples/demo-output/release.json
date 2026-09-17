@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1",
+  "task": "release",
+  "repository": "demo/pagination",
+  "target": "v1.2.0",
+  "sourceRef": "0000000000000000000000000000000000000000",
+  "headRef": "2222222222222222222222222222222222222222",
+  "generatedAt": "2026-09-16T21:14:40.972Z",
+  "provider": "fixture",
+  "model": "synthetic-fixture-not-live-ai",
+  "usage": null,
+  "requestId": null,
+  "warnings": [],
+  "data": {
+    "entries": [
+      {
+        "category": "features",
+        "description": "Expose pagination metadata.",
+        "sourceIds": [
+          "pr:11"
+        ]
+      },
+      {
+        "category": "fixes",
+        "description": "Reject invalid page sizes.",
+        "sourceIds": [
+          "pr:12"
+        ]
+      },
+      {
+        "category": "documentation",
+        "description": "Explain pagination options.",
+        "sourceIds": [
+          "commit:2222222222222222222222222222222222222222"
+        ]
+      }
+    ],
+    "evidence": {
+      "repository": "demo/pagination",
+      "version": "v1.2.0",
+      "from": "v1.1.0",
+      "to": "v1.2.0",
+      "fromSha": "0000000000000000000000000000000000000000",
+      "toSha": "2222222222222222222222222222222222222222",
+      "changes": [
+        {
+          "id": "pr:11",
+          "title": "Expose pagination metadata",
+          "body": "Expose pagination metadata",
+          "kind": "pr"
+        },
+        {
+          "id": "pr:12",
+          "title": "Reject invalid page sizes",
+          "body": "Reject invalid page sizes",
+          "kind": "pr"
+        },
+        {
+          "id": "commit:2222222222222222222222222222222222222222",
+          "title": "docs: explain pagination options",
+          "body": "docs: explain pagination options",
+          "kind": "commit"
+        }
+      ],
+      "contributors": [
+        "demo-contributor",
+        "demo-maintainer"
+      ],
+      "totalCommits": 3,
+      "includedCommits": 3,
+      "warnings": []
+    }
+  }
+}

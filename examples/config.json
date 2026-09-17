@@ -1,0 +1,11 @@
+{
+  "model": "gpt-5.3-codex",
+  "maxFiles": 60,
+  "maxDiffChars": 90000,
+  "maxFileBytes": 16000,
+  "maxContextFiles": 8,
+  "maxContextChars": 48000,
+  "maxOutputTokens": 6000,
+  "maxCommits": 200,
+  "excludePaths": ["private/", "fixtures/customer-data/"]
+}

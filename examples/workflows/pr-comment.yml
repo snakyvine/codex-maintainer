@@ -1,0 +1,21 @@
+name: PR maintainer comment
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+permissions:
+  contents: read
+  pull-requests: write
+concurrency:
+  group: codex-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Replace YOUR_OWNER. Use the default Actions token for stable bot comment ownership.
+      - uses: YOUR_OWNER/codex-maintainer@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          github-token: ${{ github.token }}
+          comment: 'true'

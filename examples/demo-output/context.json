@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1",
+  "repository": "demo/pagination",
+  "ref": "1111111111111111111111111111111111111111",
+  "generatedAt": "2026-09-16T21:14:40.954Z",
+  "fingerprint": "9276ee2aa0c682871bcfe91e64fed5e7a29c8c52bbc71a5334a19abbff217226",
+  "files": [
+    "README.md",
+    "package.json",
+    "src/paginate.js",
+    "tests/paginate.test.js"
+  ],
+  "languages": [
+    {
+      "name": "JavaScript",
+      "files": 2
+    }
+  ],
+  "manifests": [
+    {
+      "path": "package.json",
+      "dependencies": [],
+      "scripts": [
+        "test"
+      ]
+    }
+  ],
+  "frameworks": [],
+  "testSetup": [
+    "tests/paginate.test.js"
+  ],
+  "ci": [],
+  "importantModules": [
+    "src/paginate.js"
+  ],
+  "limitations": [
+    "Framework detection is heuristic. Test commands were detected, not executed."
+  ]
+}

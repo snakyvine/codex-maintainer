@@ -1,0 +1,312 @@
+{
+  "notice": "Synthetic GitHub data and hand-authored model responses; not live API output.",
+  "routes": {
+    "/repos/demo/pagination/git/blobs/9a299abc96c728ece8d370c98534a6e34c94955c": {
+      "encoding": "base64",
+      "content": "ZXhwb3J0IGZ1bmN0aW9uIHBhZ2luYXRlKGl0ZW1zLCBwYWdlTnVtYmVyLCBwYWdlU2l6ZSkgewogIGlmICghTnVtYmVyLmlzSW50ZWdlcihwYWdlTnVtYmVyKSB8fCBwYWdlTnVtYmVyIDwgMSkgewogICAgdGhyb3cgbmV3IFJhbmdlRXJyb3IoJ3BhZ2VOdW1iZXIgbXVzdCBiZSBhIHBvc2l0aXZlIGludGVnZXInKTsKICB9CiAgY29uc3Qgc3RhcnQgPSAocGFnZU51bWJlciAtIDEpICogcGFnZVNpemU7CiAgcmV0dXJuIGl0ZW1zLnNsaWNlKHN0YXJ0LCBzdGFydCArIHBhZ2VTaXplKTsKfQo=",
+      "size": 278
+    },
+    "/repos/demo/pagination/git/blobs/5e81c26fe8bb81d1a4be1c181f04aef8836e0059": {
+      "encoding": "base64",
+      "content": "aW1wb3J0IHRlc3QgZnJvbSAnbm9kZTp0ZXN0JzsKaW1wb3J0IGFzc2VydCBmcm9tICdub2RlOmFzc2VydC9zdHJpY3QnOwppbXBvcnQgeyBwYWdpbmF0ZSB9IGZyb20gJy4uL3NyYy9wYWdpbmF0ZS5qcyc7Cgp0ZXN0KCd0aGUgZmlyc3QgcGFnZSBjb250YWlucyB0aGUgZmlyc3QgdHdvIGl0ZW1zJywgKCkgPT4gewogIGFzc2VydC5kZWVwRXF1YWwocGFnaW5hdGUoWzEsIDIsIDMsIDRdLCAxLCAyKSwgWzEsIDJdKTsKfSk7CnRlc3QoJ2xhdGVyIHBhZ2VzIGNvbnRhaW4gdGhlIHJlbWFpbmluZyBpdGVtcycsICgpID0+IHsKICBhc3NlcnQuZGVlcEVxdWFsKHBhZ2luYXRlKFsxLCAyLCAzLCA0XSwgMiwgMiksIFszLCA0XSk7Cn0pOwo=",
+      "size": 359
+    },
+    "/repos/demo/pagination/git/blobs/55c0a039be642b983ccc4dc5c7516f152198896b": {
+      "encoding": "base64",
+      "content": "ewogICJuYW1lIjogInN5bnRoZXRpYy1wYWdpbmF0aW9uLWRlbW8iLAogICJwcml2YXRlIjogdHJ1ZSwKICAidHlwZSI6ICJtb2R1bGUiLAogICJzY3JpcHRzIjogewogICAgInRlc3QiOiAibm9kZSAtLXRlc3QgdGVzdHMvKi50ZXN0LmpzIgogIH0KfQo=",
+      "size": 143
+    },
+    "/repos/demo/pagination/git/blobs/d8873352778fed81bf0f5aafdcbd3fe10eca5449": {
+      "encoding": "base64",
+      "content": "IyBTeW50aGV0aWMgcGFnaW5hdGlvbiBmaXh0dXJlCgpUaGUgYmFzZWxpbmUgdmFsaWRhdGVzIHBhZ2VOdW1iZXIgYnV0IG5vdCBwYWdlU2l6ZS4gVGhlIHByb3Bvc2VkIFBSIGZpeHR1cmUgaW50cm9kdWNlcyBhbiBvZmYtYnktb25lIHJlZ3Jlc3Npb24uIFRoaXMgaXMgZGVtb25zdHJhdGlvbiBkYXRhLCBub3QgYSBwdWJsaXNoZWQgcmVwb3NpdG9yeS4K",
+      "size": 201
+    },
+    "/repos/demo/pagination": {
+      "default_branch": "main"
+    },
+    "/repos/demo/pagination/commits/main": {
+      "sha": "1111111111111111111111111111111111111111"
+    },
+    "/repos/demo/pagination/commits/v1.2.0": {
+      "sha": "2222222222222222222222222222222222222222"
+    },
+    "/repos/demo/pagination/commits/v1.1.0": {
+      "sha": "0000000000000000000000000000000000000000"
+    },
+    "/repos/demo/pagination/commits/1111111111111111111111111111111111111111": {
+      "sha": "1111111111111111111111111111111111111111"
+    },
+    "/repos/demo/pagination/commits/2222222222222222222222222222222222222222": {
+      "sha": "2222222222222222222222222222222222222222"
+    },
+    "/repos/demo/pagination/commits/0000000000000000000000000000000000000000": {
+      "sha": "0000000000000000000000000000000000000000"
+    },
+    "/repos/demo/pagination/git/trees/1111111111111111111111111111111111111111": {
+      "truncated": false,
+      "tree": [
+        {
+          "path": "src/paginate.js",
+          "type": "blob",
+          "mode": "100644",
+          "sha": "9a299abc96c728ece8d370c98534a6e34c94955c",
+          "size": 278
+        },
+        {
+          "path": "tests/paginate.test.js",
+          "type": "blob",
+          "mode": "100644",
+          "sha": "5e81c26fe8bb81d1a4be1c181f04aef8836e0059",
+          "size": 359
+        },
+        {
+          "path": "package.json",
+          "type": "blob",
+          "mode": "100644",
+          "sha": "55c0a039be642b983ccc4dc5c7516f152198896b",
+          "size": 143
+        },
+        {
+          "path": "README.md",
+          "type": "blob",
+          "mode": "100644",
+          "sha": "d8873352778fed81bf0f5aafdcbd3fe10eca5449",
+          "size": 201
+        }
+      ]
+    },
+    "/repos/demo/pagination/issues/123": {
+      "number": 123,
+      "title": "paginate silently accepts pageSize=0",
+      "body": "paginate([1, 2, 3, 4], 1, 0) returns an empty array. We expect invalid page sizes to be rejected rather than silently hiding all results. What should happen for negative and fractional sizes?",
+      "labels": [
+        {
+          "name": "bug"
+        }
+      ],
+      "user": {
+        "login": "demo-reporter",
+        "type": "User"
+      },
+      "updated_at": "2026-01-01T00:00:00Z"
+    },
+    "/repos/demo/pagination/pulls/456": {
+      "number": 456,
+      "title": "Refactor pagination offset calculation",
+      "body": "Simplify the start offset. Existing pagination behavior should remain unchanged.",
+      "changed_files": 1,
+      "state": "open",
+      "draft": false,
+      "updated_at": "2026-01-01T00:00:00Z",
+      "base": {
+        "sha": "1111111111111111111111111111111111111111",
+        "ref": "main",
+        "repo": {
+          "full_name": "demo/pagination"
+        }
+      },
+      "head": {
+        "sha": "2222222222222222222222222222222222222222",
+        "ref": "simplify-offset",
+        "repo": {
+          "full_name": "demo/pagination"
+        }
+      }
+    },
+    "/repos/demo/pagination/pulls/456/files": [
+      {
+        "filename": "src/paginate.js",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1,
+        "changes": 2,
+        "patch": "@@ -2,6 +2,6 @@\n   if (!Number.isInteger(pageNumber) || pageNumber < 1) {\n     throw new RangeError('pageNumber must be a positive integer');\n   }\n-  const start = (pageNumber - 1) * pageSize;\n+  const start = pageNumber * pageSize;\n   return items.slice(start, start + pageSize);\n }\n"
+      }
+    ],
+    "/repos/demo/pagination/labels": [
+      {
+        "name": "bug"
+      },
+      {
+        "name": "feature"
+      },
+      {
+        "name": "documentation"
+      },
+      {
+        "name": "question"
+      },
+      {
+        "name": "maintenance"
+      }
+    ],
+    "/repos/demo/pagination/commits/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/pulls": [
+      {
+        "number": 11,
+        "title": "Expose pagination metadata",
+        "body": "Expose pagination metadata",
+        "merged_at": "2026-01-01T00:00:00Z",
+        "merge_commit_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "user": {
+          "login": "demo-maintainer",
+          "type": "User"
+        },
+        "base": {
+          "repo": {
+            "full_name": "demo/pagination"
+          }
+        }
+      }
+    ],
+    "/repos/demo/pagination/commits/bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb/pulls": [
+      {
+        "number": 12,
+        "title": "Reject invalid page sizes",
+        "body": "Reject invalid page sizes",
+        "merged_at": "2026-01-01T00:00:00Z",
+        "merge_commit_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "user": {
+          "login": "demo-contributor",
+          "type": "User"
+        },
+        "base": {
+          "repo": {
+            "full_name": "demo/pagination"
+          }
+        }
+      }
+    ],
+    "/repos/demo/pagination/commits/2222222222222222222222222222222222222222/pulls": [],
+    "/repos/demo/pagination/compare/0000000000000000000000000000000000000000...2222222222222222222222222222222222222222": {
+      "status": "ahead",
+      "total_commits": 3,
+      "commits": [
+        {
+          "sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "commit": {
+            "message": "feat: expose pagination metadata"
+          },
+          "author": {
+            "login": "demo-maintainer",
+            "type": "User"
+          }
+        },
+        {
+          "sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "commit": {
+            "message": "fix: reject invalid page sizes"
+          },
+          "author": {
+            "login": "demo-contributor",
+            "type": "User"
+          }
+        },
+        {
+          "sha": "2222222222222222222222222222222222222222",
+          "commit": {
+            "message": "docs: explain pagination options"
+          },
+          "author": {
+            "login": "demo-maintainer",
+            "type": "User"
+          }
+        }
+      ]
+    },
+    "/repos/demo/pagination/releases": [
+      {
+        "tag_name": "v1.2.0",
+        "draft": false,
+        "prerelease": false,
+        "published_at": "2026-02-01T00:00:00Z"
+      },
+      {
+        "tag_name": "v1.1.0",
+        "draft": false,
+        "prerelease": false,
+        "published_at": "2026-01-01T00:00:00Z"
+      }
+    ]
+  },
+  "responses": {
+    "triage": {
+      "type": "bug",
+      "confidence": "high",
+      "summary": "The pagination helper validates pageNumber but has no guard for a zero, negative or non-integer pageSize. A zero size produces an empty slice instead of rejecting invalid input.",
+      "relatedFiles": [
+        {
+          "path": "src/paginate.js",
+          "reason": "Contains the page-size arithmetic without a corresponding validation guard."
+        },
+        {
+          "path": "tests/paginate.test.js",
+          "reason": "Covers positive pages only; invalid page-size cases are missing."
+        }
+      ],
+      "investigation": [
+        "Confirm the intended contract for pageSize before changing error behavior.",
+        "Add cases for pageSize values 0, -1, 1.5 and NaN, then verify that valid paging is unchanged."
+      ],
+      "questions": [
+        "Should invalid page sizes throw RangeError or use a documented default?"
+      ],
+      "labels": [
+        "bug"
+      ],
+      "limitations": [
+        "This is a synthetic fixture assessment. The CLI did not execute repository tests."
+      ]
+    },
+    "review": {
+      "summary": "The refactor changes a one-based page number into a zero-based offset without adjusting the public API.",
+      "findings": [
+        {
+          "category": "bug",
+          "severity": "high",
+          "confidence": "high",
+          "title": "The first page skips the first pageSize items",
+          "explanation": "For pageNumber=1 and pageSize=2, the new start is 2 instead of 0. The first page returns items 3 and 4, and subsequent pages are shifted.",
+          "recommendation": "Keep the (pageNumber - 1) offset or explicitly migrate the API and its callers to zero-based pages. Preserve the first-page regression test.",
+          "path": "src/paginate.js",
+          "side": "RIGHT",
+          "line": 5,
+          "quote": "const start = pageNumber * pageSize;"
+        }
+      ],
+      "testCoverage": {
+        "assessment": "The existing first-page assertion covers this regression, but it has not been run by Codex Maintainer.",
+        "recommendations": [
+          "Run the first-page and last-page cases in the repository test suite."
+        ]
+      },
+      "limitations": [
+        "Only the supplied changed file and selected base-repository excerpts were inspected."
+      ]
+    },
+    "release": {
+      "entries": [
+        {
+          "category": "features",
+          "description": "Expose pagination metadata.",
+          "sourceIds": [
+            "pr:11"
+          ]
+        },
+        {
+          "category": "fixes",
+          "description": "Reject invalid page sizes.",
+          "sourceIds": [
+            "pr:12"
+          ]
+        },
+        {
+          "category": "documentation",
+          "description": "Explain pagination options.",
+          "sourceIds": [
+            "commit:2222222222222222222222222222222222222222"
+          ]
+        }
+      ]
+    }
+  }
+}

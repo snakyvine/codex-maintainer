@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "features",
+              "fixes",
+              "breaking",
+              "documentation",
+              "dependencies",
+              "maintenance"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "maxLength": 100,
+              "minLength": 1
+            },
+            "maxItems": 20
+          }
+        },
+        "required": [
+          "category",
+          "description",
+          "sourceIds"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 250
+    }
+  },
+  "required": [
+    "entries"
+  ],
+  "additionalProperties": false
+}

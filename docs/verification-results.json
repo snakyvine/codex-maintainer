@@ -1,0 +1,69 @@
+{
+  "checkedAtUtc": "2026-09-16T21:14:40.734453+00:00",
+  "environment": {
+    "node": "22.16.0",
+    "npm": "10.9.2",
+    "typescript": "5.8.3",
+    "commander": "13.1.0",
+    "platform": "linux",
+    "dependencySource": "preinstalled local packages for compiler, Commander and type definitions; official openai SDK not installed"
+  },
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "test": {
+      "passed": 62,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0
+    },
+    "build": "passed",
+    "repositoryAudit": "passed-with-missing-lock-warning",
+    "offlineDemo": "passed",
+    "demoRepositoryTests": {
+      "passed": 2,
+      "failed": 0
+    },
+    "yamlParsing": "passed",
+    "npmPack": "passed",
+    "npmInstall": {
+      "status": "blocked",
+      "error": "EAI_AGAIN registry.npmjs.org"
+    },
+    "officialSdkContract": "blocked-sdk-not-installed",
+    "releaseAudit": "blocked-lockfile-missing",
+    "cleanInstall": "not-run",
+    "liveOpenAI": "not-run",
+    "liveGitHubIntegration": "not-run",
+    "hostedGitHubAction": "not-run"
+  },
+  "notClaimed": [
+    "production release readiness",
+    "live model quality evaluation",
+    "successful clean npm installation",
+    "official SDK transport validation",
+    "hosted CI execution",
+    "independent security audit"
+  ],
+  "githubUploadVerification": {
+    "checkedAtUtc": "2026-09-17T01:43:31.898142+00:00",
+    "repository": "https://github.com/snakyvine/codex-maintainer",
+    "environment": {
+      "platform": "windows",
+      "node": "24.19.0",
+      "npm": "10.9.2",
+      "openai": "7.9.0"
+    },
+    "checks": {
+      "registryInstall": "passed",
+      "registryLockfile": "generated-and-validated",
+      "check": "passed",
+      "testsPassed": 62,
+      "officialSdkContract": "passed-stub-http",
+      "releaseAudit": "passed",
+      "productionDependencyAudit": "0 known vulnerabilities"
+    },
+    "liveModelEvaluation": "not-run",
+    "note": "The top-level results preserve initial archive verification history. This record supersedes its lockfile and official SDK blockers."
+  }
+}

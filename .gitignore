@@ -1,0 +1,11 @@
+node_modules/
+.test-build/
+coverage/
+.codex-maintainer/
+/demo-output/
+*.tgz
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store

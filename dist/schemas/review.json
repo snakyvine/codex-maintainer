@@ -1,0 +1,135 @@
+{
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string",
+      "maxLength": 2000,
+      "minLength": 1
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "bug",
+              "security",
+              "breaking",
+              "improvement"
+            ]
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 180,
+            "minLength": 1
+          },
+          "explanation": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1
+          },
+          "recommendation": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 1
+          },
+          "side": {
+            "type": "string",
+            "enum": [
+              "LEFT",
+              "RIGHT"
+            ]
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100000000
+          },
+          "quote": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 3
+          }
+        },
+        "required": [
+          "category",
+          "severity",
+          "confidence",
+          "title",
+          "explanation",
+          "recommendation",
+          "path",
+          "side",
+          "line",
+          "quote"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 20
+    },
+    "testCoverage": {
+      "type": "object",
+      "properties": {
+        "assessment": {
+          "type": "string",
+          "maxLength": 2000,
+          "minLength": 1
+        },
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1
+          },
+          "maxItems": 10
+        }
+      },
+      "required": [
+        "assessment",
+        "recommendations"
+      ],
+      "additionalProperties": false
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 1000,
+        "minLength": 1
+      },
+      "maxItems": 15
+    }
+  },
+  "required": [
+    "summary",
+    "findings",
+    "testCoverage",
+    "limitations"
+  ],
+  "additionalProperties": false
+}

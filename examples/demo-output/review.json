@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1",
+  "task": "review",
+  "repository": "demo/pagination",
+  "target": "456",
+  "sourceRef": "1111111111111111111111111111111111111111",
+  "headRef": "2222222222222222222222222222222222222222",
+  "generatedAt": "2026-09-16T21:14:40.971Z",
+  "provider": "fixture",
+  "model": "synthetic-fixture-not-live-ai",
+  "usage": null,
+  "requestId": null,
+  "warnings": [
+    "Framework detection is heuristic. Test commands were detected, not executed."
+  ],
+  "data": {
+    "summary": "The refactor changes a one-based page number into a zero-based offset without adjusting the public API.",
+    "findings": [
+      {
+        "category": "bug",
+        "severity": "high",
+        "confidence": "high",
+        "title": "The first page skips the first pageSize items",
+        "explanation": "For pageNumber=1 and pageSize=2, the new start is 2 instead of 0. The first page returns items 3 and 4, and subsequent pages are shifted.",
+        "recommendation": "Keep the (pageNumber - 1) offset or explicitly migrate the API and its callers to zero-based pages. Preserve the first-page regression test.",
+        "path": "src/paginate.js",
+        "side": "RIGHT",
+        "line": 5,
+        "quote": "const start = pageNumber * pageSize;"
+      }
+    ],
+    "testCoverage": {
+      "assessment": "The existing first-page assertion covers this regression, but it has not been run by Codex Maintainer.",
+      "recommendations": [
+        "Run the first-page and last-page cases in the repository test suite."
+      ]
+    },
+    "limitations": [
+      "Only the supplied changed file and selected base-repository excerpts were inspected."
+    ],
+    "coverage": {
+      "totalFiles": 1,
+      "fetchedFiles": 1,
+      "reviewedFiles": 1,
+      "omittedFiles": 0,
+      "partialFiles": 0,
+      "unavailablePatches": 0,
+      "excludedFiles": 0,
+      "diffCharacters": 814,
+      "apiTruncated": false
+    }
+  }
+}

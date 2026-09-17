@@ -1,0 +1,20 @@
+name: Maintainer workflow improvement
+description: Describe a real maintenance problem and a constrained solution.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What maintenance task is difficult today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior and alternatives
+      description: Include required evidence, permissions and safe failure behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: How would we verify that it helps?

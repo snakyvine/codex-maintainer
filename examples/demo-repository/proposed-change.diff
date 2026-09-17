@@ -1,0 +1,10 @@
+--- a/src/paginate.js
++++ b/src/paginate.js
+@@ -2,6 +2,6 @@
+   if (!Number.isInteger(pageNumber) || pageNumber < 1) {
+     throw new RangeError('pageNumber must be a positive integer');
+   }
+-  const start = (pageNumber - 1) * pageSize;
++  const start = pageNumber * pageSize;
+   return items.slice(start, start + pageSize);
+ }

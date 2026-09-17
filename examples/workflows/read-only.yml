@@ -1,0 +1,26 @@
+name: Maintainer recommendations
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+  issues:
+    types: [opened, reopened]
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+concurrency:
+  group: codex-maintainer-${{ github.event_name }}-${{ github.event.pull_request.number || github.event.issue.number }}
+  cancel-in-progress: true
+jobs:
+  recommend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Replace YOUR_OWNER with the publisher's GitHub owner. No target checkout.
+      # Pin a reviewed commit SHA instead of the moving v1 tag in sensitive repositories.
+      - uses: YOUR_OWNER/codex-maintainer@v1
+        id: maintainer
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          github-token: ${{ github.token }}
+          comment: 'false'

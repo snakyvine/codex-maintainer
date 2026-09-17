@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1",
+  "task": "triage",
+  "repository": "demo/pagination",
+  "target": "123",
+  "sourceRef": "1111111111111111111111111111111111111111",
+  "headRef": null,
+  "generatedAt": "2026-09-16T21:14:40.967Z",
+  "provider": "fixture",
+  "model": "synthetic-fixture-not-live-ai",
+  "usage": null,
+  "requestId": null,
+  "warnings": [
+    "Framework detection is heuristic. Test commands were detected, not executed."
+  ],
+  "data": {
+    "type": "bug",
+    "confidence": "high",
+    "summary": "The pagination helper validates pageNumber but has no guard for a zero, negative or non-integer pageSize. A zero size produces an empty slice instead of rejecting invalid input.",
+    "relatedFiles": [
+      {
+        "path": "src/paginate.js",
+        "reason": "Contains the page-size arithmetic without a corresponding validation guard."
+      },
+      {
+        "path": "tests/paginate.test.js",
+        "reason": "Covers positive pages only; invalid page-size cases are missing."
+      }
+    ],
+    "investigation": [
+      "Confirm the intended contract for pageSize before changing error behavior.",
+      "Add cases for pageSize values 0, -1, 1.5 and NaN, then verify that valid paging is unchanged."
+    ],
+    "questions": [
+      "Should invalid page sizes throw RangeError or use a documented default?"
+    ],
+    "labels": [
+      "bug"
+    ],
+    "limitations": [
+      "This is a synthetic fixture assessment. The CLI did not execute repository tests."
+    ]
+  }
+}

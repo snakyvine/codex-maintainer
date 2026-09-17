@@ -1,0 +1,66 @@
+{
+  "name": "codex-maintainer",
+  "version": "1.0.0",
+  "description": "Read-only, evidence-grounded repository maintenance for GitHub.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snakyvine/codex-maintainer.git"
+  },
+  "homepage": "https://github.com/snakyvine/codex-maintainer#readme",
+  "bugs": {
+    "url": "https://github.com/snakyvine/codex-maintainer/issues"
+  },
+  "bin": {
+    "codex-maintainer": "dist/cli/index.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist/",
+    "action.yml",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "docs/",
+    "examples/",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "lint": "node scripts/lint.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build && npm run build:test && node --test .test-build/tests/*.test.js",
+    "build:test": "tsc -p tsconfig.test.json",
+    "build": "node scripts/build.mjs",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build && npm run audit:repo",
+    "demo": "npm run build && node dist/cli/index.js demo",
+    "test:sdk": "npm run build && node scripts/sdk-contract.mjs",
+    "audit:repo": "node scripts/audit.mjs",
+    "prepack": "npm run check",
+    "prepublishOnly": "npm run check && npm run test:sdk && npm run audit:release",
+    "audit:release": "node scripts/audit.mjs --release"
+  },
+  "dependencies": {
+    "commander": "13.1.0",
+    "openai": "7.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.4",
+    "typescript": "5.8.3"
+  },
+  "overrides": {
+    "undici-types": "7.8.0"
+  },
+  "keywords": [
+    "github",
+    "maintainer",
+    "codex",
+    "openai",
+    "code-review",
+    "triage"
+  ]
+}
